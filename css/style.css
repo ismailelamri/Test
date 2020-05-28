@@ -62,9 +62,27 @@
         z-index: -1;
     }
 
+    .top-to-bottom-effect:after{
+        position: absolute;
+        content: "";
+        height: 0%;
+        top:0;
+        left:0;
+        right: 0;
+        bottom: 0;
+        background-color: #333;
+        transition: height 0.5s;
+        z-index: -1;
+    }
+
     .left-to-right-effect:hover:after{
         width: 100%;
 
+    }
+
+    .top-to-bottom-effect:hover:after
+    {
+        height: 100%;
     }
    /*2- Genereal Style*/
     *{
@@ -506,6 +524,69 @@
         color: #fff;
     }
     /*Prices section*/
+    .pricing{}
+    .pricing-plans{
+        overflow: hidden;
+    }
+    .pricing-item{
+        position: relative;
+        width: 30%;
+        float: left;
+        padding: 20px 15px;
+        border: 1px solid #e8e8e8;
+        text-align: center;
+
+    }
+    .pricing-item.mg{
+        margin: 0 5%;
+    }
+
+    .pricing-item-text{
+        text-transform: uppercase;
+        font-size: 17px;
+        color: #999;
+    }
+    .pricing-item-permont{
+        width: 100px;
+        height: 100px;
+        padding: 30px 0;
+        border: 1px solid #6195ff;
+        border-radius: 50%;
+        margin: 20px auto;
+    }
+
+    .pricing-item-permont .dollard{
+        font-size: 30px;
+    }
+
+    .pricing-item-permont .month{
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    .pricing-list{
+        list-style: none;
+        margin-bottom: 20px;
+    }
+
+    .pricing-list li{
+        color: #999;
+        line-height: 1.8;
+    }
+
+    .pricing-item-btn{
+        background: none;
+        border: 0;
+        display: block;
+        border:1px solid #6195ff;
+        width: 140px;
+        padding: 10px;
+        margin: 15px auto 0 auto;
+        color: #6195ff;
+
+    }
+
     /*Team section*/
     /*Blog Page*/
     /*Contact Section*/
