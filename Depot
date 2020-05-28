@@ -1,0 +1,3 @@
+#Position fixed et position absolute il change element display block to display inline-block
+
+Si j applique la solution overflow:hidden pour resourdre le probleme du float dans un header et j' ai un drop down.Cette derniere ne s affice pas  
