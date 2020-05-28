@@ -553,6 +553,7 @@
         border: 1px solid #6195ff;
         border-radius: 50%;
         margin: 20px auto;
+        transition: color 0.5s;
     }
 
     .pricing-item-permont .dollard{
@@ -586,6 +587,47 @@
         color: #6195ff;
 
     }
+
+    .pricing-item:hover .pricing-item-permont{
+        color: #fff;
+    }
+
+    .pricing-item:hover .pricing-item-text{
+        color: #6195ff;
+    }
+
+    /*testimonial section*/
+
+    .testimonial{
+        position: relative;
+        background-image: url("../images/background/background3.webp");
+        background-size: cover;
+        background-attachment: fixed;
+        height: 300px;
+    }
+    .testimonial-content{
+        overflow: hidden;
+        padding: 100px 0;
+    }
+
+    .testimonial-item{
+        width: 50%;
+        float: left;
+        color: #fff;
+    }
+
+    .testimonial-toplayer{
+        position: relative;
+        padding: 10px 0px 40px 100px;
+    }
+
+    .testimonial-toplayer img{
+        position: absolute;
+        top: 10px;
+        left: 0;
+        border-radius: 50%;
+    }
+    .testimonial-t
 
     /*Team section*/
     /*Blog Page*/
