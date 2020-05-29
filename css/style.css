@@ -786,6 +786,52 @@
         margin: 20px 0;
     }
 
+    .contact-info{
+        margin-bottom: 40px;
+        overflow: hidden;
+    }
+
+    .contact-form div{
+      width: 50%;
+      margin: auto;
+    }
+   
+    .contact-form .contact-input-info input{
+        width: 49%;
+        background-color: #f9f9f9;
+        border-style: none;
+        padding: 10px;
+    }
+    .contact-form div input{
+        width: 99%;
+        margin: 5px 0;
+        background-color: #f9f9f9;
+        border-style: none;
+        padding: 10px;
+    }
+
+    .contact-form .contact-textarea textarea{
+        width: 99%;
+        background-color: #f9f9f9;
+        border-style: none;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+
+    .btn-message {
+        text-align: center;
+    }
+    .btn-message button{
+        background-color: #6195ff;
+        color: #fff;
+        border-style: none;
+        padding: 10px;
+    }
+   
+
+
+
     /* footer section*/
 
     .footer{

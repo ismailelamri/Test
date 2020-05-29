@@ -1,3 +1,30 @@
 #Position fixed et position absolute il change element display block to display inline-block
 
 Si j applique la solution overflow:hidden pour resourdre le probleme du float dans un header et j' ai un drop down.Cette derniere ne s affice pas  
+ <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fa fa-phone fa-2x"></i>
+                             <h3 class="contact-item-text">Phone</h2>
+                             <span class="contact-item-info">512-354-8965</span>
+                        </div><!-- ./contact-item -->
+     
+                        <div class="contact-item">
+                          <i class="fa  fa-envelope fa-2x"></i>
+                          <h3 class="contact-item-text">Email</h2>
+                          <span>ismailelamri@gmail.com</span>
+                        </div><!-- ./contact-item -->
+                        
+                         <div class="contact-item">
+                             <i class="fa fa-map-marker fa-2x"></i>
+                             <h3 class="contact-item-text">Adress</h2>
+                             <span>Rue beccard 1245</span>
+                         </div><!-- ./contact-item --></div><!-- ./contact-info -->
+                          <form  class="contact-form" action="">
+                            <div>
+                                <input type="text" placeholder="Name">
+                                <input type="text" placeholder="Email">
+                            </div>
+                            <div>
+                                <input type="text" placeholder="Subject">
+                            </div>
+                    </form>
