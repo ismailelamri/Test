@@ -1,0 +1,400 @@
+/*
+
+    1- Common Styles
+    2- General style
+    3- Sections
+        3.0- Header section
+        3.1- home section
+        3.2- About section
+        3.3- Blog section
+        3.4- Portfolio section
+        3.5- Service Section
+        3.6- Price Section
+        3.7- Team section
+        3.8- Blog Page
+        3.9- Contact section
+
+*/
+
+
+
+/* 1- Common Style */
+    /*
+        -Container
+        -Overlay 
+        -opacity
+        -Section header
+        -Section padding
+        -Hover Effect 1 left to right 
+        -hover effect 2 top to bottom
+    */
+
+    .overlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0, 0.7);
+    }
+
+    .hover-opacity{
+        transition: opacity 0.5s;
+    }
+
+    .hover-opacity:hover{
+        opacity: 0.8;
+    }
+    .left-to-right-effect{
+        position: relative;
+    }
+
+    .left-to-right-effect:after{
+        position: absolute;
+        content: "";
+        width: 0%;
+        top:0;
+        left:0;
+        right: 0;
+        bottom: 0;
+        background-color: #333;
+        transition: width 0.5s;
+        z-index: -1;
+    }
+
+    .top-to-bottom-effect{
+        position: absolute;
+        content: "";
+        height: 0%;
+        top:0;
+        left:0;
+        right: 0;
+        bottom: 0;
+        background-color: #333;
+        transition: height 0.5s;
+        z-index: -1;
+    }
+
+    .left-to-right-effect:hover:after{
+        width: 100%;
+
+    }
+
+    .top-to-bottom-effect:hover:after
+    {
+        height: 100%;
+    }
+   /*2- Genereal Style*/
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    :root{
+        --mainColor : #6195ff;
+        --grayColor : #999;
+        --bg-gray : #f9f9f9;
+        --white-color : #fff;
+    }
+
+    .container{
+        width: 80%;
+        margin: auto;
+    }
+    body{
+        font-family: 'Varela Round', sans-serif;
+    }
+
+    h1,h2,h3,h4,h5,h6{
+        font-family: montserrat,sans-serif;
+    }
+     
+    a{
+        text-decoration: none;
+    }
+
+    .pd-y{
+        padding: 60px 0 ;
+    }
+
+    button{
+        font-family: inherit;
+    }
+    .clear{
+        clear: both;/*to solve float problem */
+    }
+
+    .section-header{
+        text-align: center;
+        margin-bottom: 10px;
+
+    }
+
+    .section-header .section-title{
+        font-size: 35px;
+        text-transform: capitalize;
+        margin-bottom: 10px;
+    }
+    .section-header .line{
+        display: block;
+        height: 5px;
+        width: 70px;
+        margin: 0 auto 70px auto;
+        background-color: var(--mainColor);
+    }
+ /*Header */
+.header{
+    background-color: rgba(0,0,0, 0.5);
+    width: 100%;
+}
+
+
+.header .logo{
+    width: 40%;
+    float: left;
+}
+
+.header .logo img{
+    width: 20%;
+    margin-top: 15px;
+}
+
+.header .nav{
+    width: 60%;
+    float: left;
+    list-style: none;
+}
+
+.header .nav > li {
+    display: inline-block;
+    text-align: center;
+}
+
+.header .nav > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 30px 15px;
+    display: block;
+}
+
+.header .nav > li > a:after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    margin-top: 2px;
+    background-color: var(--mainColor);
+    transition: width 0.8s;
+}
+
+.header .nav > li > a:hover::after{
+    width: 100%;
+}
+.header .nav > li > a.active:after{
+    width: 100%;
+}
+
+.dropdown{
+    position: relative;
+}
+
+.dropdown-menu{
+    position: absolute;
+    background-color: var(--mainColor);
+    width: 150px;
+    text-align: center;
+    left: -50%;
+    top:70%;
+    opacity: 0;
+    visibility: hidden;
+    list-style: none;
+}
+
+.dropdown-menu a{
+    color: #fff;
+    display: block;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-menu{
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+}
+
+/*breadcrumb*/
+
+.breadcrumb{
+    background-color: #FAFAFA;
+}
+
+.breadcrumb-content{
+    overflow: hidden;
+   
+}
+
+.breadcrumb-title{
+    width: 50%;
+    float: left;
+    font-size: 36px;
+}
+
+.breadcrumb-list{
+    list-style: none;
+    width: 50%;
+    float: right;
+    text-align: right;
+}
+
+.breadcrumb-list li{
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.breadcrumb-list li a{
+    color: #6195ff;
+}
+
+/*blog description */
+
+.blog-desc-content{
+    width: 70%;
+}
+ .blog-desc-img{
+     margin-bottom: 15px;
+ }
+
+ .blog-desc-img img{
+     width: 100%;
+ }
+.blog-desc-list{
+    list-style: none;
+    
+}
+
+.blog-desc-list > li{
+display: inline-block;
+margin-right: 5px;
+margin-bottom: 15px;
+}
+
+.blog-desc-list >li > i {
+    color: #6195ff;
+}
+
+.blog-desc-title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.blog-desc-description{
+    line-height: 1.8;
+    color: #868F9B;
+    margin-bottom: 30px;
+}
+
+.blog-desc-tag h3,.blog-desc-tag li{
+    display: inline-block;
+    list-style: none;
+}
+
+.blog-desc-tag{
+    margin-bottom: 30px;
+}
+
+.blog-desc-tag li{
+    padding: 6px 13px;
+    font-size: 14px;
+    margin: 2px 0px;
+    background: #F4F4F4;
+    color: #10161A;
+}
+
+.blog-desc-tag li:hover{
+    background: #6195ff;
+    color: #fff;
+}
+
+.blog-desc-tag li a i{
+    color: #6195ff;
+}
+
+.blog-desc-tag li:hover a i{
+    color: #fff;
+}
+
+.author{
+    position: relative;
+    padding-left: 200px;
+    border:1px solid #EEE;
+    width: 100%;
+    height: 200px;
+}
+
+.author-img{
+    position: absolute;
+    width: 20%;
+    top: 15px;
+    left: 25px;
+}
+
+.author-img img{
+    
+    width: 100%;
+}
+
+.author-info{
+    overflow: hidden;
+    margin-top: 15px;
+    margin-left: 7px;
+    margin-bottom: 50px;
+}
+
+.author-info .author-title{
+    text-transform: uppercase;
+    float: left;
+    font-weight: bold;
+}
+
+.author-info .author-list{
+    list-style: none;
+    float: right;
+    margin-right: 15px;
+}
+
+.author-info .author-list > li {
+    display: inline-block;
+}
+
+.author-desc
+{
+    font-family: 'Varela Round', sans-serif;
+    line-height: 1.6;
+    color: #868F9B;
+    margin-left: 15px;
+    
+}
+
+.author-list li a{
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: #6195ff;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.author-list li a i {
+  line-height: 24px;
+  color: #fff;
+}
+
+.author-line{
+    display: block;
+    border:2px solid black;
+    width: 100%;
+    height: 3px;
+    margin: 0 7px;
+}
